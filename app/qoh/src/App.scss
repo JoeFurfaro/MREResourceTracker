@@ -1,0 +1,172 @@
+.cell-label {
+    padding-left: 4%;
+    padding-right: 7%;
+    background: #F1F1F1;
+    display: inline-block;
+    margin-top: 2vh;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.no-change {
+    background-color: #DDD;
+}
+
+.powered-by {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.powered-by-logo {
+    width: 25px;
+    margin-right: 8px;
+}
+
+.powered-by-text {
+    color: #777;
+    margin: 0 !important;
+    font-size: 11pt;
+}
+
+.cell-label-text {
+    margin: 0;
+    font-weight: normal;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.cell-label-image {
+    width: 60px;
+    margin-right: 15px;
+    display: inline-block;
+    
+}
+
+.warning-icon {
+    display: inline-block;
+    width: 16px;
+    margin-right: 3px;
+    margin-top: -2px;
+}
+
+.error-text {
+    color: #515151;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.error {
+    position: absolute;
+    top: 2vh;
+    right: 0;
+    padding:25px;
+    background: #F8CB57;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.qoh-date {
+    border-bottom: 1px solid #CCC;
+    margin-bottom: 18px;
+}
+
+.part-header-info {
+    background: #F1F1F1;
+    border-radius: 2px;
+}
+
+.projected-qoh, .cur-qoh {
+    text-align: center;
+    font-size: 18pt;
+    color: white;
+    border-radius: 2px;
+}
+
+td {
+    text-align: center;
+}
+
+.part-no {
+    color: #333333 !important;
+    font-size: 18pt;
+}
+
+.cur-qoh {
+    background: #205bba;
+    margin-right: 30px;
+}
+
+.cur-qoh-date {
+    margin-right: 30px;
+}
+
+.good {
+    background: #37A542;
+}
+
+.bad {
+    background: #FF7272;
+}
+
+.part-no, .part-no-heading {
+    width: 25%;
+}
+
+.qoh-cell, .qoh-heading {
+    width: 9%;
+}
+
+.projected-title {
+    background-color: #F1F1F1;
+    border-radius: 2px;
+    display: block;
+}
+
+.invis-heading {
+    width: 0.2%;
+}
+
+.qoh-date-part-no {
+    flex-grow: 1.5;
+}
+
+table {
+    font-family: "Inter";
+    border-spacing: 10px;
+    border-collapse: separate !important;
+}
+
+.table-heading {
+    padding-bottom: 15px;
+    font-weight: normal;
+    border-bottom: 1px solid #CCC;
+    text-align: center;
+}
+
+.white-text {
+    color: white;
+}
+
+.slice-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap !important;
+    gap: 10px;
+}
+
+.slice {
+    flex-basis: 8%;
+}
+
+h1, h2, h3, h4, h5, p, body, th, td {
+    font-family: "Inter" !important;
+}
+
