@@ -59,7 +59,14 @@ export const App = () => {
       refresh();
     }, 60*3000);
 
-    return () => clearInterval(interval);
+    let refreshInterval = setInterval(() => {
+      window.location.reload();
+    }, 1000*60*60*24);
+
+    return () => {
+      clearInterval(interval);
+      clearInterval(refreshInterval);
+    }
   }, []);
 
 
@@ -112,7 +119,7 @@ export const App = () => {
                           <th className="invis-heading"></th>
                           {parts[0].Quants.slice(0, 7).map((q) => {
                             let d = new Date(q.Date);
-                            const dayNames = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat"];
+                            const dayNames = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"];
                             const months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"];
                             const weekDay = dayNames[d.getDay()];
                             const month = months[d.getMonth()];
