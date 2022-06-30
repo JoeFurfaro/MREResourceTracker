@@ -61,7 +61,7 @@ export const App = () => {
 
     let refreshInterval = setInterval(() => {
       window.location.reload();
-    }, 1000*60*60*24);
+    }, 1000*60*60);
 
     return () => {
       clearInterval(interval);
@@ -74,8 +74,8 @@ export const App = () => {
     return <h1>Please specify a resource!</h1>
   }
   const refresh = () => {
-    let dev = false;
-    let url = dev ? "http://10.99.12.200:9009/" : "/"; 
+    let dev = true;
+    let url = dev ? "http://10.99.0.146:9009/" : "/"; 
     axios.get(url + "tracker/" + resource).then((res) => {
         setParts(res.data);
         setLoading(false);
@@ -103,7 +103,16 @@ export const App = () => {
 
 
         <Container fluid>
-          {!err ? null : (
+          {!err ? 
+          (
+            <>
+              {lastRefresh == null ? null : (
+                <div className="time-update">
+                  <p className="mb-0 error-text"><b>Last refresh: </b> {lastRefresh.toLocaleString()}</p>
+                </div>
+              )}
+            </>
+          ) : (
             <div className="error">
               <p className="mb-0 error-text"><img src={warningImg} className="warning-icon" /><b>Warning: Unable to refresh data. This data may not reflect recent changes.</b> {lastRefresh === null ? null : "Last successful refresh: " + lastRefresh.toLocaleString()}</p>
             </div>
