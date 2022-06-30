@@ -74,7 +74,7 @@ export const App = () => {
     return <h1>Please specify a resource!</h1>
   }
   const refresh = () => {
-    let dev = true;
+    let dev = false;
     let url = dev ? "http://10.99.0.146:9009/" : "/"; 
     axios.get(url + "tracker/" + resource).then((res) => {
         setParts(res.data);
